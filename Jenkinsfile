@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git ' https://github.com/rk4027-N/Jenkins.git'
+                git ' https://github.com/rk4027-N/Jenkins.git', branch: 'main'
             }
         }
         stage('Build with Maven') {
