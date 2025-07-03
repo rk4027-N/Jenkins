@@ -1,5 +1,5 @@
 # Build Stage
-FROM maven:3.8.7-openjdk-11 AS builder
+FROM maven:3.8.7-eclipse-temurin-11 AS builder
 WORKDIR /app
 COPY . .
 RUN mvn clean package
