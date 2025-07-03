@@ -6,6 +6,9 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/rk4027-N/Jenkins.git'
             }
         }
+        tools {
+        maven 'Maven_3.8.7'
+        }
         stage('Build with Maven') {
             steps {
                 sh 'mvn clean package'
