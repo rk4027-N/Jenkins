@@ -7,5 +7,5 @@ RUN mvn clean package
 # Runtime Stage
 FROM openjdk:11
 WORKDIR /app
-COPY --from=builder /app/target/my-app.jar .
+COPY --from=builder /app/target/my-app-1.0-SNAPSHOT.jar .
 CMD ["java", "-jar", "my-app.jar"]
